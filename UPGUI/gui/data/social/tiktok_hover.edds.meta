@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A01585F434191208}Example/gui/data/social/tiktok_hover.edds"
+ Author "mauricio"
+ ChangeDate 1061334106
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "tiktok_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

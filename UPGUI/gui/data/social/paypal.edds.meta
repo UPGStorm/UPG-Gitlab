@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{58E38A2FC5D07104}Example/gui/data/social/paypal.edds"
+ Author "mauricio"
+ ChangeDate 1731898458
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "paypal.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

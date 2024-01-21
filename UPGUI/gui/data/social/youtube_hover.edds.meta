@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C9BBA2D529D33020}Example/gui/data/social/youtube_hover.edds"
+ Author "mauricio"
+ ChangeDate 155888730
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "youtube_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

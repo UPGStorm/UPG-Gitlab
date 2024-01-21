@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D48903A250326D37}Example/gui/data/social/instagram_hover.edds"
+ Author "mauricio"
+ ChangeDate 1564126298
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "instagram_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{CD22221DC9953269}StyleFramework/gui/fonts/light24.edds"
+ Author "mauricio"
+ ChangeDate 1592519527
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "light24.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

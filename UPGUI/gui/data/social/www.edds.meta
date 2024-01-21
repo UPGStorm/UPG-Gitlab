@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{ED3C2E773BE09843}BomberUI/gui/data/social/www.png"
+ Author "mauricio"
+ ChangeDate 1592601907
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "www.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

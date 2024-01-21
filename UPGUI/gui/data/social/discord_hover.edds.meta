@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{7E935CB8AD88F3E3}Example/gui/data/social/discord_hover.edds"
+ Author "mauricio"
+ ChangeDate 423275610
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "discord_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

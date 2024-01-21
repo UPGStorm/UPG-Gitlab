@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A498D23FAF923D89}Example/gui/data/social/reddit.edds"
+ Author "mauricio"
+ ChangeDate 121810010
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "reddit.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

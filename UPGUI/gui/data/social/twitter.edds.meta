@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D133ECDA44234328}Example/gui/data/social/twitter.edds"
+ Author "mauricio"
+ ChangeDate 1598205018
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "twitter.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

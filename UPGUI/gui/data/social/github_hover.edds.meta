@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{20B70F945198C451}Example/gui/data/social/github_hover.edds"
+ Author "mauricio"
+ ChangeDate 1195027546
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "github_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

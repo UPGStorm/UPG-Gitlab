@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{FDA2B6697D48D746}Example/gui/data/social/twitch.edds"
+ Author "mauricio"
+ ChangeDate 1229106266
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "twitch.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

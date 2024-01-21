@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{DCDC142D23BDFB43}Example/gui/data/social/twitch_hover.edds"
+ Author "mauricio"
+ ChangeDate 1430432858
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "twitch_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

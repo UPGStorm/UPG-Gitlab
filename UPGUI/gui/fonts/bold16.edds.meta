@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C81AC268BC72EC96}StyleFramework/gui/fonts/bold16.edds"
+ Author "mauricio"
+ ChangeDate 1191439207
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "bold16.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

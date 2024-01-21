@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{7660638BD6E28C5F}UPGUI/gui/data/logotipo/logotipo.edds"
+ Author "mauricio"
+ ChangeDate -1415304143
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "logotipo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

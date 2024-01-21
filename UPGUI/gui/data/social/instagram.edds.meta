@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{60984F73F1E1241E}Example/gui/data/social/instagram.edds"
+ Author "mauricio"
+ ChangeDate 1362799706
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "instagram.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{7ADF0F379C1B8132}Example/gui/data/social/youtube.edds"
+ Author "mauricio"
+ ChangeDate 2000858202
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "youtube.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

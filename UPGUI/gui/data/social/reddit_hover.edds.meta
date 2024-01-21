@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{4731990E5E09D960}Example/gui/data/social/reddit_hover.edds"
+ Author "mauricio"
+ ChangeDate 289582170
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "reddit_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

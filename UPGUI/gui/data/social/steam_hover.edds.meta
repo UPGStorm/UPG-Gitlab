@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{43A2B7A863433ABE}Example/gui/data/social/steam_hover.edds"
+ Author "mauricio"
+ ChangeDate 658680922
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "steam_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

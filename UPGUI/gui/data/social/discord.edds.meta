@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C9FBD517994642CA}Example/gui/data/social/discord.edds"
+ Author "mauricio"
+ ChangeDate 255503450
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "discord.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

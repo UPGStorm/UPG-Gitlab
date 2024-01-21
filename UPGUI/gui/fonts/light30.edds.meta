@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1DDE8EDCF1888B00}StyleFramework/gui/fonts/light30.edds"
+ Author "mauricio"
+ ChangeDate 1626073959
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "light30.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

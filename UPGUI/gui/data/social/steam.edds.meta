@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{AB043F1A220E839C}Example/gui/data/social/steam.edds"
+ Author "mauricio"
+ ChangeDate 490908762
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "steam.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

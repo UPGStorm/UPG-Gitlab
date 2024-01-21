@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{81B4D122432A19A9}Example/gui/data/social/tiktok.edds"
+ Author "mauricio"
+ ChangeDate 860007514
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "tiktok.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

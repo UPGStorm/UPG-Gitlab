@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C7D0962D8E777D58}Example/gui/data/social/facebook_hover.edds"
+ Author "mauricio"
+ ChangeDate 792374362
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "facebook_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C75CCB2000A3FF18}Example/gui/data/social/twitter_hover.edds"
+ Author "mauricio"
+ ChangeDate 1799531610
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "twitter_hover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
