@@ -139,21 +139,24 @@ modded class BuildingBase
 
 		return -1;
 	}
-
+	
 	override bool EEOnDamageCalculated(TotalDamageResult damageResult, int damageType, EntityAI source, int component, string dmgZone, string ammo, vector modelPos, float speedCoef)
 	{
 		if (!super.EEOnDamageCalculated(damageResult, damageType, source, component, dmgZone, ammo, modelPos, speedCoef))
 		{
 			return false;
 		}
-
 		int dstComponent = ConvertComponent(component, LOD.NAME_FIRE, LOD.NAME_VIEW);
 		if (dstComponent != -1)
 		{
 			int doorIndex = GetDoorIndex(dstComponent);
-			if (IsDoorLocked(doorIndex))
+			if (IsDoorLocked(doorIndex) && LoadLockedDoors.getInstance().CheckDoor(GetPosition(), doorIndex))
 			{
 				return false;
+			}
+			else {
+				
+				return true;
 			}
 		}
 
