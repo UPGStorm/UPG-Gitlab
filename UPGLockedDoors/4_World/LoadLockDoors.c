@@ -44,10 +44,7 @@ class LoadLockedDoors
                     if (building.IsDoorOpen(Doors[i].doorIndex)) {
                         building.CloseDoor(Doors[i].doorIndex);
                     }
-                    building.LockDoor(Doors[i].doorIndex);
-
-                    // Set door health to a high value
-                    building.SetHealth(Doors[i].doorIndex, 99999);
+                    building.LockDoor(Doors[i].doorIndex);		
                 }
             }
         }
@@ -125,10 +122,48 @@ class GetKeyList {
 
 } 
 
+modded class BuildingBase
+{
+	private int ConvertComponent(int srcComponentIdx, string srcGeometry, string dstGeometry)
+	{
+		string selection = GetActionComponentName(srcComponentIdx, srcGeometry);
+
+		const int maxComponents = 512;
+		for (int componentIndex = 0; componentIndex < maxComponents; componentIndex++)
+		{
+			if (IsActionComponentPartOfSelection(componentIndex, selection, dstGeometry))
+			{
+				return componentIndex;
+			}
+		}
+
+		return -1;
+	}
+
+	override bool EEOnDamageCalculated(TotalDamageResult damageResult, int damageType, EntityAI source, int component, string dmgZone, string ammo, vector modelPos, float speedCoef)
+	{
+		if (!super.EEOnDamageCalculated(damageResult, damageType, source, component, dmgZone, ammo, modelPos, speedCoef))
+		{
+			return false;
+		}
+
+		int dstComponent = ConvertComponent(component, LOD.NAME_FIRE, LOD.NAME_VIEW);
+		if (dstComponent != -1)
+		{
+			int doorIndex = GetDoorIndex(dstComponent);
+			if (IsDoorLocked(doorIndex))
+			{
+				return false;
+			}
+		}
+
+		return true;
+	}
+}	
+
 modded class ActionUnlockDoors: ActionContinuousBase
 {
 	private ref map<string, ref LoadDoorState> DoorStates = new map<string, ref LoadDoorState>();
-	ref array<string> dmgZones = new array<string>;
 	ref NotificationSystem notifications = new NotificationSystem;
 	string image = "UPGResize\\Warning.paa";
 	int getNotificationColor(){
@@ -203,4 +238,4 @@ modded class ActionUnlockDoors: ActionContinuousBase
 			
 		}		
 	}
-};	
+};
