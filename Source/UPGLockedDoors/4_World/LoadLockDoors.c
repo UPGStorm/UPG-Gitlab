@@ -167,7 +167,7 @@ modded class BuildingBase
 modded class ActionUnlockDoors: ActionContinuousBase
 {
 	private ref map<string, ref LoadDoorState> DoorStates = new map<string, ref LoadDoorState>();
-	ref NotificationSystem notifications = new NotificationSystem;
+	ref NotificationSystem UPGNotificationSystem = new NotificationSystem();
 	string image = "UPGResize\\Warning.paa";
 	int getNotificationColor(){
 		return ARGB(240, 200, 20, 20);
@@ -214,27 +214,27 @@ modded class ActionUnlockDoors: ActionContinuousBase
 				Print("[Debug] item: " + key);
 				if (LoadLockedDoors.getInstance().CheckDoor(door.location, door.doorIndex)){
 					if (LoadLockedDoors.getInstance().CheckKeyandDoor(door.location, door.doorIndex, key)) {
-						notifications.SimpleNoticiation("You unlocked the door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
+						UPGNotificationSystem.NotifyPlayer("You unlocked the door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
 						door.locked = false;	
 						building.UnlockDoor(doorIndex);
 						item.Delete();
 						return;
 					}
 					else if (LoadLockedDoors.getInstance().CheckKey(key)) {
-						notifications.SimpleNoticiation("This key doesn't work on this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
+						UPGNotificationSystem.NotifyPlayer("This key doesn't work on this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
 						return;
 					}
 					else {	
-						notifications.SimpleNoticiation("You need a key to open this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
+						UPGNotificationSystem.NotifyPlayer("You need a key to open this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
 						return;
 					}
-				notifications.SimpleNoticiation("You need a key to open this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
-				return;		
+				UPGNotificationSystem.NotifyPlayer("You need a key to open this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
+				return;
 				} else if (LoadLockedDoors.getInstance().CheckKey(key)) {
-					notifications.SimpleNoticiation("This key doesn't work on this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
+					UPGNotificationSystem.NotifyPlayer("This key doesn't work on this door!", "Locked Door", image, getNotificationColor(), msgtime, player.GetIdentity());
 					return;
 				} else {
-					door.locked = false;	
+					door.locked = false;
 					building.UnlockDoor(doorIndex);
 				}		
 			}
