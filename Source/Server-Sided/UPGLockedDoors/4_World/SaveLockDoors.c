@@ -66,7 +66,7 @@ modded class ActionLockDoors
 	
 	bool EnableDoorSaveMode = CheckSaveMode.CheckMode;
 	private ref map<string, ref SaveDoorState> DoorStates = new map<string, ref SaveDoorState>();
-	
+	ref UPGNotifications notifications = new UPGNotifications;
 	SaveDoorState GetDoor(vector pos, int doorIndex){
 		string Door = string.Format("%1-%2-%3-%4", pos[0], pos[1], pos[2], doorIndex);
 		DoorStates[Door] = new SaveDoorState();
@@ -107,8 +107,15 @@ modded class ActionLockDoors
 			if (doorIndex != -1){	
 				SaveDoorState door = GetDoor(building.GetPosition(), doorIndex);
 				ItemBase item = ItemBase.Cast(action_data.m_MainItem);
+				PlayerBase player = PlayerBase.Cast(action_data.m_Player);
 				string key = item.GetType();
-				door.locked = true;
+				if (!LoadLockedDoors.getInstance().CheckDoor(door.location, door.doorIndex)){
+					door.locked = true;
+				}
+				else {
+					notifications.NotifyPlayer("Door", "You cannot lock this door!", player.GetIdentity().GetPlainId());
+					return;
+				}	
 				building.LockDoor(doorIndex);
 				if (EnableDoorSaveMode == true) {
 					SaveLockedDoors.getInstance().SaveDoor(door);
